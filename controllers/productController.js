@@ -20,3 +20,25 @@ exports.getProductById = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.addProduct = async (req, res, next) => {
+  try {
+    const { name, price, description, stock } = req.body;
+
+    if (!name || !price || !stock) {
+      return res.status(400).json({ message: "All required fields must be filled" });
+    }
+
+    const product = await Product.create({
+      name,
+      price,
+      description,
+      stock
+    });
+
+    res.status(201).json(product);
+  } 
+  catch (error) {
+    next(error);
+  }
+};
