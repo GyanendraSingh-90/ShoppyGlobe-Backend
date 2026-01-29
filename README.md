@@ -16,14 +16,8 @@ This repository contains the backend implementation of the **ShoppyGlobe E-comme
  **bcryptjs** – Password hashing
  **Thunder Client** – API testing
 
-
-
 ##  Setup Instructions
 
-### Clone the Repository
-### Install Dependencies
-### Environment Variables 
-
-## Run the Application
-
-**npm run dev**
+**Install Dependencies** - npm install
+**Environment Variables**
+**Run the Application** - npm start
